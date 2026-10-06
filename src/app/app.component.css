@@ -1,0 +1,47 @@
+.barra {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 18px 24px;
+  background: var(--color-superficie);
+  border-bottom: 1px solid var(--color-borde);
+}
+
+.marca {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--color-acento);
+}
+
+.menu {
+  display: flex;
+  gap: 8px;
+}
+
+.menu a {
+  padding: 8px 14px;
+  border-radius: 999px;
+  color: var(--color-texto-suave);
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.menu a:hover {
+  background: var(--color-fondo);
+  color: var(--color-texto);
+}
+
+.menu a.activo {
+  background: var(--color-acento);
+  color: #ffffff;
+}
+
+.contenido {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 32px 24px 64px;
+}

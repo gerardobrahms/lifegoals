@@ -1,0 +1,28 @@
+<h1>Mis metas en la vida</h1>
+<p class="subtitulo">Escribe una meta y queda guardada en la coleccion metas de Firestore.</p>
+
+<form class="formulario" (ngSubmit)="agregar()">
+  <input
+    type="text"
+    name="nuevaMeta"
+    placeholder="Por ejemplo, correr un maraton"
+    [(ngModel)]="nuevaMeta"
+    autocomplete="off" />
+  <button type="submit" [disabled]="!nuevaMeta.trim()">Agregar</button>
+</form>
+
+<p class="aviso" *ngIf="error">{{ error }}</p>
+<p class="aviso" *ngIf="cargando && !error">Cargando metas...</p>
+
+<ul class="lista" *ngIf="!cargando">
+  <li *ngFor="let m of metas">
+    <span>{{ m.meta }}</span>
+    <button type="button" class="borrar" (click)="eliminar(m.id)" aria-label="Eliminar meta">
+      Eliminar
+    </button>
+  </li>
+</ul>
+
+<p class="vacio" *ngIf="!cargando && !error && metas.length === 0">
+  Todavia no hay metas registradas.
+</p>

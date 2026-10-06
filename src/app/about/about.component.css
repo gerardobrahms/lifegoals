@@ -1,0 +1,45 @@
+h1 {
+  margin: 0 0 4px;
+  font-size: 1.9rem;
+  letter-spacing: -0.02em;
+}
+
+.subtitulo {
+  margin: 0 0 24px;
+  color: var(--color-texto-suave);
+}
+
+.tarjeta {
+  padding: 22px 24px;
+  background: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-radius: 12px;
+}
+
+.tarjeta h2 {
+  margin: 0 0 16px;
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-texto-suave);
+}
+
+dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px 24px;
+  margin: 0;
+}
+
+dt {
+  font-weight: 600;
+  color: var(--color-texto-suave);
+}
+
+dd {
+  margin: 0;
+}
+
+dd a {
+  color: var(--color-acento);
+}

@@ -1,0 +1,18 @@
+<h1>Acerca de</h1>
+<p class="subtitulo">
+  LifeGoals es una aplicacion en Angular 18 con Firestore para administrar metas personales.
+</p>
+
+<section class="tarjeta">
+  <h2>Datos de contacto</h2>
+  <dl>
+    <dt>Nombre</dt>
+    <dd>{{ nombre }}</dd>
+
+    <dt>Correo</dt>
+    <dd><a [href]="'mailto:' + correo">{{ correo }}</a></dd>
+
+    <dt>Telefono</dt>
+    <dd><a [href]="'tel:' + telefonoEnlace">{{ telefono }}</a></dd>
+  </dl>
+</section>

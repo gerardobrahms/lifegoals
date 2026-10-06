@@ -1,0 +1,22 @@
+server {
+    listen       ${PORT};
+    server_name  _;
+
+    root  /usr/share/nginx/html;
+    index index.html;
+
+    # El ruteo de Angular vive en el navegador, asi que cualquier ruta
+    # desconocida tiene que devolver index.html en lugar de un 404.
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
+
+    location ~* \.(?:js|css|woff2?|png|jpg|jpeg|svg|ico)$ {
+        expires 1y;
+        add_header Cache-Control "public, immutable";
+    }
+
+    gzip              on;
+    gzip_types        text/css application/javascript image/svg+xml;
+    gzip_min_length   1024;
+}
